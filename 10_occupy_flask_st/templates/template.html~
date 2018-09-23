@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head> <title>Occupation Table</title> </head>
+<body>
+  <h1><center>Occupation Table</center></h1>
+  <table align = "center", border="1", style="width:100%">
+    {% for key in jobs %}
+    <tr>
+      <th> {{key}} </th>
+      <th> {{jobs[key]}} </th>
+    </tr>
+    {% endfor %}
+</table>
+  <h2> {{ randomJob }} </h2>
+</body>
+</html>
