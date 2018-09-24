@@ -6,7 +6,7 @@
 
 from flask import Flask, render_template
 from random import choice
-app=Flask(_name_)
+app=Flask(__name__)
 
 #From Claire Liu's HW 2:
 #Uses more robust code + is easier to follow
