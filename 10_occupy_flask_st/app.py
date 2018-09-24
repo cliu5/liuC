@@ -50,6 +50,6 @@ def occupations():
     #uses our template in /templates directory
     return render_template('template.html',randomJob=randomJob(),jobs=dictionaryMaker())
 
-if (_name_ == "_main_"):
+if (__name__ == "__main__"):
     app.debug = True
     app.run()
