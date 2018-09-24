@@ -2,11 +2,15 @@
 <html>
 <head> <title>Occupation Table</title> </head>
 <body>
+  <!-- {{ randomJob returned from ranomJob() from app.py}} -->
     <h1>Random Job: {{ randomJob }} </h1>
   <h2><center>Occupation Table</center></h2>
+  <!-- Creation of Table Styles -->
   <table align = "center", border="1", style="width:100%">
+    <!-- Loop through whole dictionary -->
     {% for key in jobs %}
     <tr>
+      <!-- Creates | Job Title | percentage | in the table -->
       <th> {{key}} </th>
       <th> {{jobs[key]}} </th>
     </tr>
