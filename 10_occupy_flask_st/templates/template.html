@@ -8,11 +8,17 @@
   <!-- Creation of Table Styles -->
   <table align = "center", border="1", style="width:100%">
     <!-- Loop through whole dictionary -->
-    {% for key in jobs %}
+  
     <tr>
+      <th> Occupations </th>
+      <th> Percentage </th>
+    </tr>
+    <tr>
+			     
       <!-- Creates | Job Title | percentage | in the table -->
-      <th> {{key}} </th>
-      <th> {{jobs[key]}} </th>
+        {% for key in jobs %}
+      <td> {{key}} </td>
+      <td> {{jobs[key]}} </td>
     </tr>
     {% endfor %}
 </table>
