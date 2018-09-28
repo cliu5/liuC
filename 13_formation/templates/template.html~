@@ -1,0 +1,19 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Sup dude!
+    </title>
+  </head>
+  <h1>
+    What's poppin {{ username }}
+  </h1>
+  <h2>
+    Sick {{ method }} request
+  </h2>
+  <h3>
+    Hope you have a great day buddy!!!
+  </h3>
+</html>
+
