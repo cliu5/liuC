@@ -1,9 +1,10 @@
-# LiuseLeef - Claire Liu, Brian Lee
+# LiuseLeef - Claire Liu, Brian Lee, Tim Marder
 # SoftDev1 pd6
 # K17 -- Average
 # 2018-10-09
 
 import sqlite3
+import db_builder
 
 def get_grades(id):
     '''
@@ -18,6 +19,8 @@ def get_grades(id):
     for grade in c:
         grades[grade[0]] = grade[1]
     return grades
+    db.commit()
+    db.close()
 
 def get_average(id):
     '''
@@ -49,6 +52,8 @@ def get_averages_all():
         average = get_average(id)
         averages.append((id, name, average))
     return averages
+    db.commit()
+    db.close()
 
 def print_averages():
     averages = get_averages_all()
@@ -61,9 +66,7 @@ def create_averages_table():
     '''
     db = sqlite3.connect("discobandit.db")
     c = db.cursor()
-    command = "DROP TABLE peeps_avg"
-    c.execute(command)
-    command = "CREATE TABLE peeps_avg (id INTEGER PRIMARY KEY, name STRING, average DECIMAL)"
+    command = "CREATE TABLE peeps_avg (id INTEGER PRIMARY KEY, name TEXT, average DECIMAL)"
     c.execute(command)
     averages = get_averages_all()
     for average in averages:
@@ -79,4 +82,5 @@ def create_averages_table():
 # print("Testing get_averages_all()")
 # print(get_averages_all())
 # print_averages()
+db_builder.makeTable()
 create_averages_table()
