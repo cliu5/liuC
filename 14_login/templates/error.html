@@ -2,8 +2,12 @@
 <html>
 	<title>pwd wrong!</title>
 	<head>
-	  {{ message }}
-		</head></br>
+	  {% with msgs=get_flashed_messages() %}
+	  {% for each in msgs %}
+	  {{ each }}
+	  <br>
+	  {% endfor% }
+	</head></br>
 	  <a href = '/'><input type = "button" value = "return"></a>
 		<body>
 		</body>

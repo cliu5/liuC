@@ -3,7 +3,7 @@
 #K14 -- Do I know You?
 #2018-10-02
 
-from flask import Flask, render_template, request, session, redirect, url_for
+from flask import Flask, render_template, request, session, redirect, url_for, flash
 import os
 
 app = Flask(__name__)
@@ -43,9 +43,11 @@ def login():
 		return redirect(url_for('home'))
 	# if either is wrong then it returns an error message
 	elif request.args['usr'] == 'Alan Smith' and request.args['pwd']!='password12345678':
-		return render_template('error.html',message='password wrong!')
-	else:
-		return render_template('error.html',message='username wrong!')
+                #flash('Wrong password')
+		return render_template('error.html')
+        else:
+                #flash('Wrong username')
+		return render_template('error.html')
 
 @app.route('/logout')
 def logout():
