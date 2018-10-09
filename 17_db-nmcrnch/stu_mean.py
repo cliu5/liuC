@@ -55,10 +55,28 @@ def print_averages():
     for average in averages:
         print("{}: {} has an average of {}".format(average[0], average[1], average[2]))
 
+def create_averages_table():
+    '''
+    Creates a new table peeps_avg containing each student's id, name, and their average.
+    '''
+    db = sqlite3.connect("discobandit.db")
+    c = db.cursor()
+    command = "DROP TABLE peeps_avg"
+    c.execute(command)
+    command = "CREATE TABLE peeps_avg (id INTEGER PRIMARY KEY, name STRING, average DECIMAL)"
+    c.execute(command)
+    averages = get_averages_all()
+    for average in averages:
+        command = "INSERT INTO peeps_avg VALUES ({}, \"{}\", {})".format(average[0], average[1], average[2])
+        c.execute(command)
+    db.commit()
+    db.close()
+
 # print("Testing get_grades()")
 # print(get_grades(4))
 # print("Testing get_average()")
 # print(get_average(4))
 # print("Testing get_averages_all()")
 # print(get_averages_all())
-print_averages()
+# print_averages()
+create_averages_table()
