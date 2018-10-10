@@ -13,13 +13,12 @@ def get_grades(id):
     '''
     db = sqlite3.connect("discobandit.db")
     c = db.cursor()
-    command = "SELECT code, mark FROM courses WHERE id=" + str(id)
-    c.execute(command)
+    command = "SELECT code, mark FROM courses WHERE id=(?)"
+    c.execute(command, (id,))
     grades = {}
     for grade in c:
         grades[grade[0]] = grade[1]
     return grades
-    db.commit()
     db.close()
 
 def get_average(id):
@@ -52,7 +51,6 @@ def get_averages_all():
         average = get_average(id)
         averages.append((id, name, average))
     return averages
-    db.commit()
     db.close()
 
 def print_averages():
@@ -70,11 +68,12 @@ def create_averages_table():
     c.execute(command)
     averages = get_averages_all()
     for average in averages:
-        command = "INSERT INTO peeps_avg VALUES ({}, \"{}\", {})".format(average[0], average[1], average[2])
-        c.execute(command)
+        command = "INSERT INTO peeps_avg VALUES (?, ?, ?)"
+        c.execute(command, (average[0], average[1], average[2]))
     db.commit()
     db.close()
 
+db_builder.makeTable()
 # print("Testing get_grades()")
 # print(get_grades(4))
 # print("Testing get_average()")
@@ -82,5 +81,4 @@ def create_averages_table():
 # print("Testing get_averages_all()")
 # print(get_averages_all())
 # print_averages()
-db_builder.makeTable()
 create_averages_table()
