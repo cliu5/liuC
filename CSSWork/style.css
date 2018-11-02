@@ -1,0 +1,27 @@
+
+h1{
+    text-align:center;
+    background-color:powderblue;
+    color:white;
+}
+body{
+    background-color:grey;
+}
+
+ul, h3{
+    list-style-type:none;
+    display:inline;
+}
+li, a{
+    color:powderblue;
+    font-weight:bold;
+    text-decoration: none;
+    margin:0px;
+    padding:0px;
+    }
+p,h2 {
+    display:inline;
+    float:right;
+    padding:0px;
+    margin:0px;
+}
