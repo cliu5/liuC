@@ -7,14 +7,29 @@
     <title>foo title</title>
   </head>
 
-  <body>
-    <div id="left"></div>
-<div id="right"></div>
-<div id="top"></div>
-<div id="bottom"></div>
+  <body style="    background-color:#808080;
+	       font-family: 'Arimo', sans-serif;">
+    
+    <div id="left" style=" background:#666666;
+    position: fixed;  top: 0; bottom: 0;
+    width: 16px; left: 0;" ></div>
+<div id="right" style=" background:#666666;
+    position: fixed;  top: 0; bottom: 0;
+    width: 16px; right: 0;"></div>
+<div id="top" style=" background:#666666;
+    position: fixed; left: 0; right: 0;
+    height: 20px; top:0;"></div>
+<div id="bottom" style=" background:#666666;
+    position: fixed; left: 0; right: 0;
+    height: 20px; bottom:0;"></div>
 
 
-<h1>h1 foo</h1>
+<h1 style=" text-align:center;
+    background-color:#BDBDBD;
+    color:white;
+    padding:10px;
+    padding-top:5px;
+    padding-bottom:5px;" >h1 foo</h1>
 <!--
 <table>
   <tr>
@@ -27,19 +42,57 @@
   </tr>
 </table>
 -->
-<div id="leftside">
-    <h3>nav foo</h3>
+<div id="leftside" style=" float: left; 
+    padding-right: 100px;">
+    <h3 style="  list-style-type:none;
+    display:inline;
+    padding-left:20px;" >nav foo</h3>
     <br>
-    <ul>
-      <li><a href="">dis</a></li>
-      <li><a href="">dat</a></li>
-      <li><a href="">de udda ting</a></li>
+    <ul style=" list-style-type:none;
+    display:inline;
+    padding-left:20px;">
+      <li style="   color:#BDBDBD;
+    text-decoration: none;
+    margin:0px;
+    padding:0px;
+    font-weight:bold;
+    padding-left:11px;" ><a href="" style="   color:#BDBDBD;
+    text-decoration: none;
+    margin:0px;
+    padding:0px;
+    font-weight:bold;
+    padding-left:11px;" >dis</a></li>
+      <li style="   color:#BDBDBD;
+    text-decoration: none;
+    margin:0px;
+    padding:0px;
+    font-weight:bold;
+    padding-left:11px;" ><a href="" style="   color:#BDBDBD;
+    text-decoration: none;
+    margin:0px;
+    padding:0px;
+    font-weight:bold;
+    padding-left:11px;" >dat</a></li>
+      <li style="   color:#BDBDBD;
+    text-decoration: none;
+    margin:0px;
+    padding:0px;
+    font-weight:bold;
+    padding-left:11px;"><a href="" style="   color:#BDBDBD;
+    text-decoration: none;
+    margin:0px;
+    padding:0px;
+    font-weight:bold;
+    padding-left:11px;" >de udda ting</a></li>
     </ul>
 </div>
-<div id="rightside">
-  <h2>main foo heading</h2>
+<div id="rightside" style="  float: left; 
+    width: 75%;">
+  <h2 style="padding:0px;
+    margin:0px;" >main foo heading</h2>
   <br>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu tortor vitae ipsum malesuada pharetra. Nunc quis suscipit nibh, volutpat imperdiet sem. Morbi vestibulum porta sem, sit amet volutpat diam accumsan eu. Morbi feugiat lobortis arcu, sed dignissim felis pretium dignissim. Integer cursus ultricies augue. Morbi malesuada, turpis in placerat mollis, nulla sapien ultricies ex, sit amet congue purus lorem eu elit. Aenean pulvinar tellus purus, varius convallis magna euismod at. Integer vel vulputate magna. Mauris ullamcorper mauris eu augue pharetra, et efficitur erat pulvinar. 
+    <p style="padding:0px;
+    margin:0px;" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu tortor vitae ipsum malesuada pharetra. Nunc quis suscipit nibh, volutpat imperdiet sem. Morbi vestibulum porta sem, sit amet volutpat diam accumsan eu. Morbi feugiat lobortis arcu, sed dignissim felis pretium dignissim. Integer cursus ultricies augue. Morbi malesuada, turpis in placerat mollis, nulla sapien ultricies ex, sit amet congue purus lorem eu elit. Aenean pulvinar tellus purus, varius convallis magna euismod at. Integer vel vulputate magna. Mauris ullamcorper mauris eu augue pharetra, et efficitur erat pulvinar. 
 
 Donec ultrices finibus semper. Cras facilisis nibh quis sapien lobortis venenatis. Nam eget consectetur nibh. Phasellus euismod, metus et faucibus aliquam, sem sapien tempor libero, ut tristique metus lacus tempor velit. Donec ut ipsum in dolor aliquet eleifend. <br><br>Praesent non diam sit amet felis elementum fermentum. Donec a est et tortor egestas ornare nec in mauris. In porttitor eget dui eu congue.
 
@@ -49,7 +102,17 @@ Vestibulum scelerisque, nisl in condimentum tristique, purus arcu sagittis est, 
       <br>
       <br>
 </div>
-  <div id="copyright">
+  <div id="copyright" style="float: right;
+    padding-left: 100%; 
+    padding-top: 10px;
+    padding-bottom: 0px;
+    padding-right: 20px;
+    background: #535559; 
+    white-space: nowrap;
+    color:#808080;
+    line-height:50px;
+    position: relative;
+    bottom: -90px;">
 
 
       Copyright &copy; 2016 Clyde "Thluffy" Sinclair
