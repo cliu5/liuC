@@ -3,15 +3,45 @@
   <head>
     
     <title>Foundation Demo</title>
-    <h1> Foundation Demo </h1>
+    <center>
+      <h1> Sephora Foundation Demo </h1>
+    </center>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.0/css/foundation.css">
   </head>
-  <body>
-    <div class="callout">
+  <body style="background-color:#EDAE49;">
+    <div style="background-color:#D14958;" class="top-bar">
+  <div style="background-color:#D14958;" class="top-bar-left">
+    <ul style="background-color:#D14958;" class="dropdown menu" data-dropdown-menu>
+      <li style="color:black;"  class="menu-text">Nav Bar</li>
+      <li style="color:black;">
+        <a style="color:black;" href="#callout">Callouts</a>
+	<!--
+        <ul style="color:black;" class="menu vertical">
+          <li><a href="#callouts">Callouts</a></li>
+          <li><a href="#grids">Grids</a></li>
+          <li><a href="#">Three</a></li>
+        </ul>
+	-->
+      </li>
+      <li ><a style="color:black;" href="#grid">Grids</a></li>
+      <li><a style="color:black;" href="#">Three</a></li>
+    </ul>
+  </div>
+  <div class="top-bar-right">
+    <ul class="menu">
+      <li><input type="search" placeholder="Search"></li>
+      <li><button type="button" class="button" style="background-color:#30638E;" >Search</button></li>
+    </ul>
+  </div>
+    </div>
+    <br>
+    
+    <div id="callout"  class="callout" style="background-color:#30638E;">
   <h5>This is a callout.</h5>
   <p>Woke photo booth chia, unicorn celiac fingerstache taxidermy tattooed listicle cronut adaptogen master cleanse cloud bread typewriter humblebrag. Wayfarers sriracha fixie tattooed, DIY fingerstache small batch stumptown next level food truck mixtape tousled semiotics PBR&B. Distillery aesthetic plaid banh mi. Messenger bag authentic master cleanse af chicharrones, roof party quinoa.</p>
     </div>
-    <div class="callout success">
+    <div class="callout success" style="background-color:#00798C;">
       <h5>This is another  callout but in green</h5>
       <p>Woke photo booth chia, unicorn celiac fingerstache taxidermy tattooed listicle cronut adaptogen master cleanse cloud bread typewriter humblebrag. Wayfarers sriracha fixie tattooed, DIY fingerstache small batch stumptown next level food truck mixtape tousled semiotics PBR&B. Distillery aesthetic plaid banh mi. Messenger bag authentic master cleanse af chicharrones, roof party quinoa.
 
@@ -19,69 +49,73 @@
     
     </div>
     <br>
-    <div class="grid-container">
+   <div class="grid-container">
       <div class="grid-x grid-padding-x">
         <div class="large-12 cell">
 	  <div class="grid-x grid-padding-x">
             <div class="large-8 medium-8 cell">
-              <h5>This is a grid</h5>
+              <h5>This is a grid. Foundation grid cells adjust according to window size.</h5>
 
               <div class="grid-x grid-padding-x">
 		<div class="large-12 cell">
-		  <div class="primary callout">
+		  <div style="background-color:#D14958;"class="primary callout">
                     <p>Lorem ipsum dolor amet sustainable meggings shaman, photo booth flexitarian lumbersexual chicharrones gochujang normcore vexillologist quinoa williamsburg jianbing. Yr photo booth franzen, master cleanse vape hell of hashtag jean shorts banjo helvetica vaporware tilde disrupt artisan tumblr. Cred cliche brooklyn, XOXO dreamcatcher pork belly green juice prism mumblecore fam squid. Hot chicken tousled heirloom, pug iceland sriracha photo booth lyft shoreditch tumblr umami copper mug kickstarter. Vice keffiyeh flannel gentrify pitchfork vexillologist pug. Plaid street art waistcoat, cliche photo booth yuccie PBR&B bespoke literally truffaut etsy beard kickstarter.</p>
 		  </div>
 		</div>
               </div>
               <div class="grid-x grid-padding-x">
 		<div class="large-6 medium-6 cell">
-		  <div class="primary callout">
+		  <div style="background-color:#00798C;" class="primary callout">
                     <p>Hell of keytar put a bird on it, jianbing mumblecore woke paleo tattooed franzen iPhone hoodie selvage gastropub. Bitters church-key shabby chic pitchfork asymmetrical wolf. Marfa letterpress next level artisan, wolf hella aesthetic tote bag cold-pressed beard plaid pour-over. Trust fund narwhal locavore cold-pressed intelligentsia edison bulb shabby chic raw denim. Skateboard fingerstache cliche celiac green juice tacos. Microdosing plaid 3 wolf moon, salvia hoodie health goth try-hard offal.</p>
 		  </div>
 		</div>
 		<div class="large-6 medium-6 cell">
-		  <div class="primary callout">
-                    <p>Coloring book kale chips skateboard 90's. Raclette messenger bag put a bird on it microdosing tumeric small batch church-key PBR&B edison bulb bushwick. Quinoa coloring book kickstarter, biodiesel forage gentrify fashion axe. Twee health goth hoodie intelligentsia lyft sriracha truffaut fanny pack poutine bushwick etsy cronut. Locavore twee subway tile, swag semiotics retro snackwave lumbersexual. Biodiesel plaid art party, celiac chicharrones fashion axe typewriter pitchfork banjo vexillologist chillwave squid microdosing cornhole. Squid deep v adaptogen, taiyaki sriracha +1 yr edison bulb locavore.</p>
+		  <div style="background-color:#00798C;" class="primary callout">
+                    <p>Hell of keytar put a bird on it, jianbing mumblecore woke paleo tattooed franzen iPhone hoodie selvage gastropub. Bitters church-key shabby chic pitchfork asymmetrical wolf. Marfa letterpress next level artisan, wolf hella aesthetic tote bag cold-pressed beard plaid pour-over. Trust fund narwhal locavore cold-pressed intelligentsia edison bulb shabby chic raw denim. Skateboard fingerstache cliche celiac green juice tacos. Microdosing plaid 3 wolf moon, salvia hoodie health goth try-hard offal.
+
+</p>
 		  </div>
 		</div>
               </div>
               <div class="grid-x grid-padding-x">
 		<div class="large-4 medium-4 small-4 cell">
-		  <div class="primary callout">
-                    <p>Synth subway tile pork belly portland occupy health goth XOXO la croix post-ironic chillwave photo booth hexagon. Retro deep v adaptogen pitchfork, cred letterpress freegan +1 gentrify meh meditation stumptown craft beer blog. Pug bitters microdosing unicorn, ugh locavore bespoke intelligentsia fingerstache godard lyft direct trade plaid. Banh mi drinking vinegar 90's, vape VHS health goth cronut cloud bread sartorial heirloom semiotics plaid poke. Hoodie wolf coloring book everyday carry.</p>
-		  </div>
-		</div>
-		<div class="large-4 medium-4 small-4 cell">
-		  <div class="primary callout">
+		  <div style="background-color:#003D58; color:white;" class="primary callout">
                     <p>Hexagon poke squid cred sriracha bushwick vexillologist everyday carry. You probably haven't heard of them helvetica pug gluten-free. Drinking vinegar wolf celiac glossier, blog retro deep v. Mustache coloring book flannel organic fingerstache.</p>
 		  </div>
 		</div>
 		<div class="large-4 medium-4 small-4 cell">
-		  <div class="primary callout">
-                    <p>Lorem ipsum dolor amet cliche air plant farm-to-table, four dollar toast af schlitz la croix irony hella. Whatever lumbersexual pok pok flannel adaptogen banh mi jean shorts narwhal coloring book craft beer distillery cred direct trade crucifix. Taiyaki glossier copper mug helvetica umami. Blog letterpress helvetica enamel pin slow-carb glossier cloud bread, unicorn roof party butcher +1 activated charcoal godard. Meditation ugh leggings 90's.</p>
+		  <div style="background-color:#003D58; color:white;" class="primary callout">
+                    <p>Hexagon poke squid cred sriracha bushwick vexillologist everyday carry. You probably haven't heard of them helvetica pug gluten-free. Drinking vinegar wolf celiac glossier, blog retro deep v. Mustache coloring book flannel organic fingerstache.</p>
+		  </div>
+		</div>
+		<div class="large-4 medium-4 small-4 cell">
+		  <div style="background-color:#003D58; color:white;" class="primary callout">
+                    <p>Hexagon poke squid cred sriracha bushwick vexillologist everyday carry. You probably haven't heard of them helvetica pug gluten-free. Drinking vinegar wolf celiac glossier, blog retro deep v. Mustache coloring book flannel organic fingerstache.</p>
 		  </div>
 		</div>
               </div>
               <div class="grid-x grid-padding-x">
 		<div class="large-12 cell">
 		  <div class="large-4 medium-4 cell">
-		    <h5>push my buttons</h5>
-		    <p><a href="#" class="tiny button">smol button</a><br/>
-		      <a href="#" class="success button expanded">expanded success button</a>
-		      <a href="#" class="alert button small">small alert button</a><br/>
-		     
+		    <h4>push my buttons</h4>
+		    <p><a style="background-color:#30638E;" href="#" class="tiny button">smol button</a><br/>
+		      <a  style="background-color:#D14958; color:white;"  class="success button expanded">expanded success button</a>
+		      <a style="background-color:#003D58;" class="disabled alert button">Disabled Alert Button</a><br>
+
+		      <a style="background-color:#00798C"; class="alert button small">small alert button</a><br/>
+		      <label style="background-color:#30638E" for="exampleFileUpload" class="button">Upload File Button</label>
+<input type="file" id="exampleFileUpload" class="show-for-sr">
+		      <div >
+      <a style="background-color:#D14958" class="button float-left">Floating Left Button</a>
+      <a style="background-color:#D14958" class="button float-right">Floating Right Button</a>
+    </div>
 		  </div>
 		</div>
 	      </div>
 	    </div>
 	  </div>
-	   <h4 id="float-demo">  floating buttons </h4>
-    <div >
-      <a class="button float-left">Left</a>
-      <a class="button float-right">Right</a>
-    </div>
-    <br>
-    <br>
+   
+    
     <br>
 <h3> wow a scrolling table!! </h3>
 <div class="row">
@@ -173,12 +207,30 @@
     </div>
   </div>
 </div>
+<br>
 <h3> badges </h3> 
 <span class="badge primary">1</span>
 <span class="badge secondary">2</span>
 <span class="badge success">3</span>
 <span class="badge alert">A</span>
 <span class="badge warning">B</span>
-
+<br>
+<br>
+<br>
+<h3> pagination </h3>
+<nav aria-label="Pagination">
+  <ul class="pagination text-center">
+    <li class="pagination-previous disabled" style="background-color: #003D58; color:white;">Previous</li>
+    <li class="current" style="background-color: #30638E; color:white;"><span class="show-for-sr" >You're on page</span> 1</li>
+    <li><a href="#" aria-label="Page 2" style="background-color: #30638E; color:white;">2</a></li>
+    <li><a style="background-color: #30638E; color:white;" href="#" aria-label="Page 3">3</a></li>
+    <li><a style="background-color: #30638E; color:white;" href="#" aria-label="Page 4">4</a></li>
+    <li style="background-color: #D14958; color:white;" class="ellipsis"></li>
+    <li><a style="background-color: #30638E; color:white;" href="#" aria-label="Page 364">364</a></li>
+    <li><a style="background-color: #30638E; color:white;" href="#" aria-label="Page 365">365</a></li>
+    <li class="pagination-next"><a href="#" aria-label="Next page" style="background-color: #003D58; color: white;">Next</a></li>
+  </ul>
+</nav>
 
   </body>
+</html>
