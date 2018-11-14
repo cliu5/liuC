@@ -17,10 +17,11 @@ def root():
     dic = json.loads(data.decode(encoding))
     print(dic)
     print (dic['url'])
-    return render_template(pic = dic['url'], "index.html")
+    return render_template( "index.html", pic = urllib.parse(dic['url']))
     
     
     
 if __name__ == "__main__":
     app.debug = True
     app.run()
+
