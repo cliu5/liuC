@@ -4,20 +4,30 @@
 #2018-11-13  
 
 from flask import Flask, render_template
-import urllib, json
+import urllib.request
+import json
+import ssl
+
+ #Taken from Cathy's QAF post
+context = ssl._create_unverified_context()
 
 app=Flask(__name__)
 
 @app.route("/")
 def root():
-    urlData = "https://api.nasa.gov/planetary/apod?api_key=NNKOjkoul8n1CH18TWA9gwngW1s1SmjESPjNoUFo"
-    webURL = urllib.request.urlopen(urlData)
+    urlData = "https://api.nasa.gov/planetary/apod?api_key=wv7X1ZwzclmKH1VSh8sqjgoYeip2bc6rl2tAXtJS"
+    
+    webURL = urllib.request.urlopen(urlData,context=context)
+    
     data = webURL.read()
-    encoding = webURL.info().get_content_charset('utf-8')
-    dic = json.loads(data.decode(encoding))
-    print(dic)
-    print (dic['url'])
-    return render_template( "index.html", pic = urllib.parse(dic['url']))
+    print(data)
+    #CONVERSION TO JSON
+    #encoding = webURL.info().get_content_charset('utf-8')
+    data = json.loads(data)
+    #print(dic)
+    #print (dic['url'])
+    img_data=data['url']
+    return render_template( "index.html", url = img_data)
     
     
     
