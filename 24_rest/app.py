@@ -27,7 +27,8 @@ def root():
     #print(dic)
     #print (dic['url'])
     img_data=data['url']
-    return render_template( "index.html", url = img_data)
+    words=data['explanation']
+    return render_template( "index.html", url = img_data, stuff=words)
     
     
     
