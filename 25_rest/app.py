@@ -1,23 +1,22 @@
-#Claire Liu + Addison Huang
+#Claire Liu 
 #SoftDev1 PD6
-#K24: A RESTful Journey Skyward
-#2018-11-13  
+#K25: Getting More REST
+#2018-11-14  
 
 from flask import Flask, render_template
 import urllib.request
 import json
 import ssl
 
- #Taken from Cathy's QAF post
 context = ssl._create_unverified_context()
 
 app=Flask(__name__)
 
 @app.route("/")
 def root():
-    urlData = "https://api.nasa.gov/planetary/apod?api_key=wv7X1ZwzclmKH1VSh8sqjgoYeip2bc6rl2tAXtJS"
-    
-    webURL = urllib.request.urlopen(urlData,context=context)
+    urlData = "https://newsapi.org/v2/everything?sources=buzzfeed&apiKey="
+    key="c068ae23da9846c0b6d2c1bc2852dc2b"
+    webURL = urllib.request.urlopen(urlData+key,context=context)
     
     data = webURL.read()
     print(data)
@@ -26,9 +25,16 @@ def root():
     data = json.loads(data)
     #print(dic)
     #print (dic['url'])
-    img_data=data['url']
-    words=data['explanation']
-    return render_template( "index.html", url = img_data, stuff=words)
+    print("------------")
+    print(data)
+    print("-----------")
+    
+    title=data['articles'][4]['title']
+    print(title)
+    author=data['articles'][4]['author']
+    url=data['articles'][4]['url']
+    urlToImage=data['articles'][4]['urlToImage']    
+    return render_template( "index.html", _title = title, _author=author, _url=url, _urlToImage=urlToImage)
     
     
     
