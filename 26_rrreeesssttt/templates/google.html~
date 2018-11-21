@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>API Demos</title> 
+  </head>
+  <body>
+      <ul "style=list-style:none;">
+      <li style="list-style-type: none;">
+ <a href="/"> The Met Museum API </li></a>
+      <li style="list-style-type: none;">
+	<a href="/advice"> Advice API </li></a>
+    </ul>
+    <h1>Google API Demo </h1>
+    <center>
+   <a style="font-weight: normal;" href="{{_urlPoem}}" <h2>{{_title}} </h2> </a>
+      </center>
+
+    <h4 style="font-weight: normal;"><i>Written by: {{_poet}} </i> </h4>
+
+    <p>
+      {{_poem}}
+    </p>
+    
+    <img src={{_urlToImage}}>
+  </body>
+</html>
