@@ -12,7 +12,7 @@ import random
 context = ssl._create_unverified_context()
 
 app=Flask(__name__)
-'''
+
 @app.route("/")
 def met():
     urlData = "https://collectionapi.metmuseum.org/public/collection/v1/objects/"
@@ -60,7 +60,7 @@ def advice():
     advice=data['slip']['advice']
     slip=data['slip']['slip_id']
     return render_template("advice.html",_advice=advice,_slip=slip)
-'''
+
 
 @app.route("/google")
 def advice():
