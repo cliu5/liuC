@@ -1,3 +1,12 @@
+/* Phase III */
+/* Helper Functions:
+ 
+   changeHeading to change the HTML of the header
+   changeBack to change the HTML of the header back to its default of "Hello World!"
+   removeItem to remove elements-- it accesses the parentNode and then removes the child (itself)
+
+*/
+
 var changeHeading = function(e) {
     var h = document.getElementById("h")
     h.innerHTML = e
@@ -12,6 +21,7 @@ var removeItem = function(e) {
     toRemove.parentNode.removeChild(toRemove);
 };
 
+/* Giving each list item the mouseover, mouseout, and click features */
 
 var lis = document.getElementsByTagName("li");
 for(var i=0; i < lis.length; i++) {
@@ -19,10 +29,12 @@ for(var i=0; i < lis.length; i++) {
     lis[i].addEventListener('mouseout', changeBack);
     lis[i].addEventListener('click', removeItem);
 };
+
+
 var addItem=function(e){
     var list=document.getElementById("thelist");
     var item=document.createElement("li");
-    item.innerHTML="WORD";
+    item.innerHTML="CHEESE";
     item.addEventListener('lick',removeItem);
     item.addEventListener('mouseover',function(e){changeHeading(this.innerHTML);});
     item.addEventListener('mouseout',changeBack);
@@ -48,6 +60,7 @@ var addFib=function(e){
     index++;
 };
     
+
 
 var fb=document.getElementById("fb");
 fb.addEventListener("click",addFib);
